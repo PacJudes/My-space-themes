@@ -1,0 +1,24 @@
+/* KEYFRAMES */
+
+@keyframes floating { 
+    0% { transform: translate(0,  0px); } 
+    50%  { transform: translate(0, 20px); } 
+    100%   { transform: translate(0, -0px); }     
+} 
+
+@-webkit-keyframes reveal { from { opacity:0; } to { opacity:1; }  }
+   @-moz-keyframes reveal { from { opacity:0; } to { opacity:1; }  }
+     @-o-keyframes reveal { from { opacity:0; } to { opacity:1; }  }
+        @keyframes reveal { from { opacity:0; } to { opacity:1; }  }
+body {
+    -webkit-animation: 0s linear forwards reveal;
+     -moz-animation: 0s linear forwards reveal;
+       -o-animation: 0s linear forwards reveal;
+          animation:  0s linear forwards reveal;
+}
+.blurbs, .box, .box.comments {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
